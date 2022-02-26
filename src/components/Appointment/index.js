@@ -46,7 +46,6 @@ export default function Appointment(props) {
         onCancel={onCancel}
         interviewer={props.interview && props.interview.interviewer}
       />)}   
-      )
     </article>
-  );
+    );
 };
