@@ -1,16 +1,18 @@
-import { getAppointmentsForDay, getInterview } from "helpers/selectors";
+import { getAppointmentsForDay, getInterview, getInterviewersForDay } from "helpers/selectors";
 
 const state = {
   days: [
     {
       id: 1,
       name: "Monday",
-      appointments: [1, 2, 3]
+      appointments: [1, 2, 3],
+      interviewers: [2]
     },
     {
       id: 2,
       name: "Tuesday",
-      appointments: [4, 5]
+      appointments: [4, 5],
+      interviewers: [1, 2]
     }
   ],
   appointments: {
@@ -88,12 +90,12 @@ test("getInterview returns null if no interview is booked", () => {
 });
 
 test("getInterviewersForDay returns an array", () => {
-  const result = getInterviewersForday(state, "Monday");
+  const result = getInterviewersForDay(state, "Monday");
   expect(Array.isArray(result)).toBe(true);
 });
 
 test("getInterviewersForDay returns an array with a length matching the number of interviewers for that day", () => {
-  const result = getAppointmentsForDay(state, "Monday");
+  const result = getInterviewersForDay(state, "Monday");
   expect(result.length).toEqual(1);
 });
 
