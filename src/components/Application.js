@@ -43,7 +43,6 @@ export default function Application() {
         setState({...state, appointments});
       }
     })
-    .catch(err => console.log(err));
   };
 
   function deleteInterview(id) {
@@ -63,7 +62,6 @@ export default function Application() {
         setState({...state, appointments});
       }
     })
-    .catch(err => console.log(err));
   };
 
   const appointmentList = dailyAppointments.map(appointment => {
