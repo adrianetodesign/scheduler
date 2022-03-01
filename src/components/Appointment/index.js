@@ -28,6 +28,14 @@ export default function Appointment(props) {
     back();
   }
 
+  const getInterviewer = (interview) => {
+    for (const interviewerObj of props.interviewers) {
+      if (interviewerObj.id === interview.interviewer) {
+        return interviewerObj.name;
+      }
+    }
+  }
+
   return (
     <article className="appointment">
       <Header time={props.time}/>
@@ -35,7 +43,7 @@ export default function Appointment(props) {
       {mode === SHOW && (
         <Show
           student={props.interview.student}
-          interviewer={props.interview.interviewer}
+          interviewer={getInterviewer(props.interview)}
         />
       )}
       {mode === CREATE && (
