@@ -33,10 +33,28 @@ export default function useApplicationData() {
       ...state.appointments,
       [id]: appointment
     };
+
+    const dayId = Math.ceil(id/5) -1;
+
+    let newDay = {
+      ...state.days[dayId],
+      spots: state.days[dayId].spots
+    }
+
+    if (!state.appointments[id].interview) {
+      newDay = {
+        ...state.days[dayId],
+        spots: state.days[dayId].spots - 1
+      } 
+    }
+
+    let days = state.days;
+    days[dayId] = newDay;
+
     return axios.put(`/api/appointments/${id}`, {interview})
     .then((res) => {
       if (res.status === 204) {
-        setState({...state, appointments});
+        setState({...state, appointments, days});
       }
     })
   };
@@ -51,6 +69,16 @@ export default function useApplicationData() {
       ...state.appointments,
       [id]: appointment
     };
+
+    const dayId = Math.ceil(id/5) -1;
+
+    let newDay = {
+      ...state.days[dayId],
+      spots: state.days[dayId].spots + 1
+    }
+
+    let days = state.days;
+    days[dayId] = newDay;
 
     return  axios.delete(`/api/appointments/${id}`)
     .then((res) => {
