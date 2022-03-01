@@ -73,7 +73,7 @@ export default function Application() {
       interviewers={dailyInterviewers} 
       {...appointment} 
       bookInterview={bookInterview}
-       deleteInterview={deleteInterview}/>
+      deleteInterview={deleteInterview}/>
   })
   const setDay = day => setState({ ...state, day });
 
