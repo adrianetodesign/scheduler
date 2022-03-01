@@ -46,10 +46,10 @@ export default function Application() {
     .catch(err => console.log(err));
   };
 
-  function deleteInterview(id, interview) {
+  function deleteInterview(id) {
     const appointment = {
       ...state.appointments[id],
-      interview: { ...interview }
+      interview: null
     };
 
     const appointments = {
