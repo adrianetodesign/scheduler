@@ -24,13 +24,13 @@ describe("Appointments", () => {
       .first()
       .click({force: true});
 
-    cy.get("[data-testid=student-name-input]").clear().type("Cassilda");
+    cy.get("[data-testid=student-name-input]").clear().type("Cassilda of Carcosa");
 
     cy.get("[alt='Tori Malcolm']").click();
 
     cy.contains("Save").click();
 
-    cy.contains(".appointment__card--show", "Cassilda");
+    cy.contains(".appointment__card--show", "Cassilda of Carcosa");
     cy.contains(".appointment__card--show", "Tori Malcolm");
   });
  });
