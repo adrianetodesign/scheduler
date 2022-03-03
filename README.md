@@ -2,7 +2,7 @@
 
 ## Final Product
 
-![Interview Scheduler Root Page](https://github.com/adrianetodesign/scheduler/blob/main/docs/final-product.png)
+![Interview Scheduler Root Page](https://github.com/adrianetodesign/scheduler/blob/master/docs/final-product.png)
 
 ## Features
 - Interview Scheduler is a seamless, dynamic, single-page app thanks to the power of React.
@@ -21,16 +21,16 @@
 
 ## How to Use
 ### Add an Interview to the Schedule
-![Add an Interview](https://github.com/adrianetodesign/scheduler/blob/main/docs/schedule-create.gif)
+![Add an Interview](https://github.com/adrianetodesign/scheduler/blob/master/docs/schedule-create.gif)
 
 ### Edit an Existing Interview
-![Edit an Interview](https://github.com/adrianetodesign/scheduler/blob/main/docs/schedule-edit.gif)
+![Edit an Interview](https://github.com/adrianetodesign/scheduler/blob/master/docs/schedule-edit.gif)
 
 ### Delete an Interview
-![Delete an Interview](https://github.com/adrianetodesign/scheduler/blob/main/docs/schedule-delete.gif)
+![Delete an Interview](https://github.com/adrianetodesign/scheduler/blob/master/docs/schedule-delete.gif)
 
 ### Browse through the Different Days
-![Browse Days](https://github.com/adrianetodesign/scheduler/blob/main/docs/schedule-browse.gif)
+![Browse Days](https://github.com/adrianetodesign/scheduler/blob/master/docs/schedule-browse.gif)
 
 ## Dependencies
 - Axios
