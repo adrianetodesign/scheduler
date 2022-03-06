@@ -110,7 +110,7 @@ export default function Appointment(props) {
       {mode === ERROR_DELETE && (
         <Error 
         message="Sorry, could not cancel this appointment."
-        onClose={back}
+        onClose={() => transition(SHOW)}
       />
       )}
     </article>
